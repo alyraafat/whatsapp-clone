@@ -1,6 +1,6 @@
 import { Avatar, IconButton } from '@mui/material'
 import React from 'react'
-import { SearchOutlined } from '@mui/icons-material';
+import { InsertEmoticon, Mic, SearchOutlined } from '@mui/icons-material';
 import AttachFile from '@mui/icons-material/AttachFile';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import './Chat.css';
@@ -37,6 +37,19 @@ function Chat() {
           This is a message
           <span className='chat__timestamp'>{new Date().toUTCString()}</span>
         </p>
+      </div>
+      <div className='chat__footer'>
+        <InsertEmoticon/>
+        <form>
+          <input 
+            placeholder='Type a message'
+            type="text"
+          />
+          <button type='submit'>
+            Send a message
+          </button>
+        </form>
+        <Mic/>
       </div>
     </div>
   )
